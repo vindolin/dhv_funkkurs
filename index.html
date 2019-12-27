@@ -241,6 +241,7 @@ function flash_right_answer() {
 }
 
 var topic_labels = {
+	'Alles zusammen': 'mixed',
 	'Rechtliches 1': 'rechtliches_1',
 	'Rechtliches 2': 'rechtliches_2',
 	'Rechtliches 3': 'rechtliches_3',
@@ -252,9 +253,6 @@ var topic_labels = {
 }
 
 $(function() {
-
-	topic_labels['Alles zusammen'] = 'mixed';
-
 	test['mixed'] = [];
 	var menu = '<ul id="chapters">';
 	$.each(topic_labels, function(label, name) {
@@ -268,7 +266,6 @@ $(function() {
 	menu += '</ul>';
 	$('#chapter_links').html(menu);
 	$('#question').on('click', flash_right_answer);
-
 });
 </script>
 </body>
